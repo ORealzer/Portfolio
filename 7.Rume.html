@@ -1,17 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Dungeon Dive Project</title>
+        <link rel="icon" type="image/x-icon" href="Images/Pixel.png">
+        <meta name="description" content="Portfolio project showcasing Dungeon Dive, a commercial RPG Maker MV game developed by a solo game designer">
         <link rel="stylesheet" href="projectStyle.css">
     </head>
     <body>
-        
-        
+        <header class="main-header">
+            <nav class="main-nav" aria-label="Main navigation">
+                <div class="nav-container">
+                    <a href="index.html" class="nav-logo" aria-label="Home">
+                        <span>Portfolio</span>
+                    </a>
+                    
+                    <!-- Main navigation -->
+                    <ul id="primary-navigation" class="nav-list">
+                        <li class="nav-item"><a href="1.dungeondive.html" class="nav-link">Dungeon Dive</a></li>
+                        <li class="nav-item"><a href="2.spellBook.html" class="nav-link">Spell Book</a></li>
+                        <li class="nav-item"><a href="3.horrid.html" class="nav-link">Horrid</a></li>
+                        <li class="nav-item"><a href="4.modelling.html" class="nav-link">3D Models</a></li>
+                        <!--<li class="nav-item"><a href="5.art.html" class="nav-link">2D Art</a></li>-->
+                    </ul>
+                </div>
+            </nav>
+        </header>
 
-        <script src="" async defer></script>
+        <main class="content-wrapper">
+            <article class="project-article">
+                <h1 class="project-title">Rume</h1>
+                
+                <!-- Media gallery section -->
+                <section class="media-gallery" aria-labelledby="gallery-heading">
+                    <h2 id="gallery-heading" class="visually-hidden">Game Screenshots and Video</h2>
+                    
+                    <div class="gallery-container">
+                        <div class="main-media-container">
+                            <!-- Image will be shown by default -->
+                            <figure class="main-image-container active-media">
+                                <img id="main-image" src="Images\Screenshot 2026-08-21 072325(1).png" alt="Dungeon Dive gameplay screenshot">
+                                <figcaption class="visually-hidden">Main game screenshot</figcaption>
+                            </figure>
+                            
+                            <!-- YouTube video container (hidden by default) -->
+                            <div class="video-container">
+                                <iframe id="youtube-video" src="" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        
+                        <div class="thumbnail-container" role="tablist">
+                            <button class="thumbnail active" role="tab" aria-selected="true" 
+                                onclick="showImage('Images/Screenshot 2026-08-21 072325(1).png', this)">
+                                <img src="Images\Screenshot 2026-08-21 072325(1).png" alt="Thumbnail 1: Dungeon environment">
+                            </button>
+                            <button class="thumbnail" role="tab" aria-selected="false" 
+                                onclick="showYouTubeVideo('xi2S7E1HMQg', this)">
+                                <img src="Images\Screenshot 2026-08-21 072325(1).png" alt="Watch gameplay trailer">
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Project information sections -->
+                <section class="project-info-container" aria-labelledby="project-info-heading">
+                    <h2 id="project-info-heading">Project Details</h2>
+                    <dl class="project-details">
+                        <dt>Role:</dt>
+                        <dd>Game Designer</dd>
+                        
+                        <dt>Team Size:</dt>
+                        <dd>1</dd>
+                        
+                        <dt>Development Time:</dt>
+                        <dd>8 months</dd>
+                        
+                        <dt>Engine:</dt>
+                        <dd>Unreal Engine</dd>
+                    </dl>
+                </section>
+
+                <section class="about-container" aria-labelledby="about-heading">
+                    <h2 id="about-heading">About the Project</h2>
+                    <p>Rume is the biggest game I've been working on. It is a 3rd person horror shooter inspired by the Resident Evil game series. While the game is not complete yet it has taught alot when it comes to Unreal Engine.<br><br></p>
+
+                    <p>What has been implemented so far: 
+                        <br> Gun system: Multiple guns the player can use each with their own values tuned to be defferentiate between each of them. 
+                        <br>AI: Simple zombie AI that roams around, chases the player after spoting them and attack when in range.
+                        <br>Item System: A inventory system that allows the player to pickup, use or drop items.
+                        <br>Interaction System: There are puzzles and other objects the player can interact with.
+                    </p>
+                </section>
+
+                <section class="learned-container" aria-labelledby="learned-heading">
+                    <h2 id="learned-heading">What I Learned</h2>
+                    <ul class="learnings-list">
+                        <li><strong>Blueprints:</strong> Most of my knowledge of Unreal Engine's Blueprint system comes from this project, while easier than C++ it is still very complex.</li>
+                        <li><strong>Procedural Environment:</strong> Unreal Engine has a system called Procedural Content Generation (PCG), I have used it to create forest and recently buildings. It requires alot setup but once functional it makes level creation much faster with more focus available on the look and layout instead of manually placing each peice and checking for gabs.</li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+
+        <script src="projectScript.js" defer></script>
     </body>
 </html>
